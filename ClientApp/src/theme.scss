@@ -1,0 +1,39 @@
+
+@import '~@angular/material/theming';
+//@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+
+//@include mat-core();
+
+
+$default-theme: mat-light-theme(mat-palette($mat-light-blue),mat-palette($mat-grey),mat-palette($mat-red));
+$form-theme: mat-dark-theme(mat-palette($mat-grey),mat-palette($mat-grey),mat-palette($mat-blue));
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+
+);
+
+
+.default-theme {
+
+    @include mat-core();
+
+    @include mat-stepper-theme($default-theme);
+
+   @include angular-material-theme($default-theme);
+   @include mat-button-theme($default-theme);
+
+   
+}
+
+.form-theme {
+    @include mat-core();
+    @include mat-stepper-theme($default-theme);
+    @include mat-form-field-theme($form-theme);
+
+}
+
+
+

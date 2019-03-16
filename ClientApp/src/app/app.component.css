@@ -1,0 +1,46 @@
+
+
+
+ .mat-step-header .mat-step-icon {
+  background-color: red;
+}
+
+.custom a {
+    margin-right: 20px;   
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+a:hover {
+  color: white;
+  background-color: rgb(1, 59, 121);
+}
+
+.mat-toolbar {
+background: #068C9B;
+color: white;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+position: fixed;
+margin: 0;
+top: 0px;
+}
+
+
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .spacing {
+    flex: 1 1 auto;
+  }
+
+  body {
+margin: 0;
+
+  }
+
+  .behind {
+      background-color: black;
+      background: black;
+  }

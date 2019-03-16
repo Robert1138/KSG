@@ -1,0 +1,64 @@
+
+
+
+<div class = "default-theme">  
+
+
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out names of your children </ng-template>
+        
+        <div fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl2" required>
+        </mat-form-field>
+      </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out names of guardians</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="secondCtrl2" required>
+          </mat-form-field>
+        <div class = "default=theme">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button color = "primary" mat-raised-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button (click)="createPDF()">Build Form</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
