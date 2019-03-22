@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Models\Login; 
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +19,30 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test',function(){
-    return "ok hey"; 
-});
 
-Route::get('/test1',function(){
-    return "Yet another api request test"; 
+Route::get('/test',function(){
+    
+    $test = "this text";
+
+    $logins = Login::all();
+
+    echo $logins;
+
+    /*
+    try {
+        DB::connection()->getPdo();
+        $test = "db is connected";
+    } catch (\Exception $e) {
+        $test = "failure";
+        die("Could not connect to the database.  Please check your configuration. error:" . $e );
+    }
+
+    */
+
+
+
+
+
+    return $test;
+
 });
