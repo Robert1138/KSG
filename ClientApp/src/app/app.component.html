@@ -1,33 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class = "behind">
-<div>
-<mat-toolbar fullscreen >
-  <mat-toolbar-row >
-  <span>Kids Safeguard</span>
-  <span class = "spacing"> </span>
 
-  <div class = "custom">
-  <a routerLink = "/about">About </a>
-  <a routerLink = "/formpage">Application </a>
-  <a routerLink = "/contact">Contact </a>
+  <!-- Navbar menu -->
+  <div>
+    <mat-toolbar fullscreen>
+      <mat-toolbar-row>
+      <span class = "nav-title"><a routerLink = "/home">Kids Safeguard System</a></span>
+      <span class = "spacing"> </span>
+
+      <div class = "custom">
+      <a routerLink = "/about">About </a>
+      <a routerLink = "/register"> Register </a>
+      <a routerLink = "/dashboard">Dashboard</a>
+      <!-- Application won't be a tab on final version-->
+      <a routerLink = "/formpage">Forms </a>
+      <a routerLink = "/contact">Contact </a>
+      </div>
+      
+      </mat-toolbar-row>
+    </mat-toolbar>
   </div>
-  
-  </mat-toolbar-row>
-</mat-toolbar>
-</div>
 
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-</div>
-<router-outlet></router-outlet>
-
-<!----->
-
-<div style="text-align:center">
+  <div style="text-align:center">
     <h1>
       Welcome to {{ title }}!
     </h1>
   </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,7 +1,4 @@
-
-
-
- .mat-step-header .mat-step-icon {
+.mat-step-header .mat-step-icon {
   background-color: red;
 }
 
@@ -10,6 +7,14 @@
     color: white;
     text-decoration: none;
     padding: 5px 10px;
+}
+
+.nav-title a {
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
 }
 
 a:hover {
@@ -26,21 +31,19 @@ margin: 0;
 top: 0px;
 }
 
-
 .example-icon {
-    padding: 0 14px;
-  }
+  padding: 0 14px;
+}
   
-  .spacing {
-    flex: 1 1 auto;
-  }
+.spacing {
+  flex: 1 1 auto;  
+}
 
-  body {
-margin: 0;
+body {
+  margin: 0;
+}
 
-  }
-
-  .behind {
-      background-color: black;
-      background: black;
-  }
+.behind {
+  background-color: black;
+  background: black;
+}
