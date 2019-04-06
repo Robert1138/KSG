@@ -1,14 +1,20 @@
+/* Remove * selector if issues come up, eliminates empty space between navbar and div 
+TODO: fix margin issues on About, Forms pages */
+* {
+  margin: 0;
+}
+body {
+  margin: 0;
+}
 .mat-step-header .mat-step-icon {
   background-color: red;
 }
-
 .custom a {
     margin-right: 20px;   
     color: white;
     text-decoration: none;
     padding: 5px 10px;
 }
-
 .nav-title a {
   margin-left: 20px;
   font-size: 30px;
@@ -16,12 +22,10 @@
   text-decoration: none;
   padding: 5px 10px;
 }
-
 a:hover {
   color: white;
   background-color: rgb(1, 59, 121);
 }
-
 .mat-toolbar {
 background: #068C9B;
 color: white;
@@ -29,20 +33,16 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 position: fixed;
 margin: 0;
 top: 0px;
+/* ensures that the nav bar is on the top layer, so 
+text doesn't overlap it as you scroll down */
+z-index: 1;
 }
-
 .example-icon {
   padding: 0 14px;
 }
-  
 .spacing {
   flex: 1 1 auto;  
 }
-
-body {
-  margin: 0;
-}
-
 .behind {
   background-color: black;
   background: black;
