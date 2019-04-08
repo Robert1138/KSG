@@ -36,7 +36,6 @@ Route::get('/test',function(){
         $test = "failure";
         die("Could not connect to the database.  Please check your configuration. error:" . $e );
     }
-
     */
 
 
@@ -46,3 +45,24 @@ Route::get('/test',function(){
     return $test;
 
 });
+
+
+
+
+
+// return all user info
+Route::get('users', 'LoginController@index');
+// return info for specific user
+Route::get('user/{Username}', 'LoginController@show');
+// delete user by Id
+Route::delete('delete/{id}', 'LoginController@delete');
+// add a user 
+Route::post('user/{username}/{password}/{isLawyer}/{email}','LoginController@store');
+
+// return all user account info
+//Route::get('account', 'UseraccountController@index');
+
+
+////////// USERACCOUNT Routes
+Route::get('accounts', 'UseraccountController@index');
+Route::get('account/{id}','UseraccountController@show');
