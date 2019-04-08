@@ -22,6 +22,7 @@ import { AboutComponent } from './about/about.component';
 
 
 import { ViewpdfService } from './viewpdf.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
@@ -30,7 +31,8 @@ import { ViewpdfService } from './viewpdf.service';
     AppComponent,
     ContactComponent,
     FormPageComponent,
-    AboutComponent
+    AboutComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

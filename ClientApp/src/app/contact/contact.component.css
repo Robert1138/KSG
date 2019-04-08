@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-body, html {
+body, html, .contactCardContainer {
     height: 100%;
 }
 h2 {
@@ -19,6 +19,7 @@ h2 {
     font-size: 20px;
     font-family: Helvetica, sans-serif;
     margin: 1%;
+    width: 750px;
 }
 .contactCardContainer h1 {
     color: black;
@@ -58,7 +59,7 @@ h2 {
     background-color: rgba(6, 140, 155, 0.281);
     cursor: pointer;
 }
-/* selects p tags immediatelly following h2 tags */
+/* selects p tags immediately following img elements */
 .helpContainer img + p {
     font-size: 1em;
     margin: 10px;
@@ -88,31 +89,30 @@ h2 {
 /* Background image is fixed as you scroll */
 .parallax {
     background-image: url('/assets/customersupport2.jpg');
-    min-height: 500px;
+    height: 500px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Centers text */
-.centered {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.parent-vcenter:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
 }
+.child-vCenter {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* Centers text */
 .centeredText {
    top: 50%;
    left: 50%;
+   color: rgb(88, 85, 85);
 }
-.parallax-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 /* Cards */
 .cards {
     display: flex;

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormPageComponent } from './form-page/form-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,6 +11,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'formpage', component: FormPageComponent },
+  { path: 'home', component: LandingPageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
 
 
 ];
