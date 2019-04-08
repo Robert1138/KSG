@@ -31,7 +31,7 @@ h2 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    height: 450px;
+    height: 600px;
 }
 .helpContainer p {
     font-size: 20px;
@@ -40,10 +40,28 @@ h2 {
 }
 .helpContainer h1 {
     color: black;
-    font-size: 3em;
+    font-size: 2.5em;
+    font-weight: 500;
     font-family: Helvetica, sans-serif;
     margin-bottom: 0;
     margin-top: 5%;
+}
+.helpContainer h2 {
+    font-weight: 600;
+}
+.button {
+    margin-top: 10%;
+    color: white;
+    background-color: #068C9B;
+}
+.button:hover {
+    background-color: rgba(6, 140, 155, 0.281);
+    cursor: pointer;
+}
+/* selects p tags immediatelly following h2 tags */
+.helpContainer img + p {
+    font-size: 1em;
+    margin: 10px;
 }
 /* Number, email, location section */
 .infoContainer {
@@ -61,6 +79,7 @@ h2 {
 .infoContainer h1 {
     color: black;
     font-size: 3em;
+    font-weight: 300;
     font-family: Helvetica, sans-serif;
     margin-bottom: 0;
     margin-top: 5%;
@@ -79,7 +98,7 @@ h2 {
 /* Centers text */
 .centered {
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -87,8 +106,14 @@ h2 {
    top: 50%;
    left: 50%;
 }
+.parallax-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-/* Flexbox */
+/* Cards */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -103,6 +128,7 @@ h2 {
     border-radius: 7px;
     padding: 0 0 50px 0;
     min-height: 300px;
+    min-width: 300px;
 }
 .card > ul {
     list-style: none;
@@ -122,4 +148,36 @@ h2 {
 }
 .card h2 {
     padding-top: 15px;
+}
+.card p {
+    padding: 5px;
+}
+/* Location/contact details */
+.detailsContainer {
+    display: flex;
+    padding: 0;
+}
+.detailsContainer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detailsLeft {
+    background-color: #efefef;
+    flex: 1;
+}
+.detailsLeft h2, .detailsRight h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.detailsLeft p, .detailsRight p {
+    color: rgb(88, 85, 85);
+}
+.detailsRight {
+    flex: 1;
+    padding: 1rem;
+    padding: 0;
+}
+section {
+    height: 100%;
+    padding: 1rem;
 }
