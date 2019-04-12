@@ -1,21 +1,21 @@
 export interface account {
  
-    id: number;
-    father: string;
-    mother: string;
-    sister_TG: string;
-    brother_TG: string;
-    daughter: string;
-    son: string ;
-    sister_DA: string;
-    brotherInLaw_DA: string;
-    brother_DA: string;    
-    sisterInLaw_DA: string;    
-    cousin: string;    
-    form_TG: any;   
-    form_DA: any;    
-    paid: boolean;    
-    datePaid: string;    
-    dateJoined: string;   
+    Id: number;
+    Father: string;
+    Mother: string;
+    Sister_TG: string;
+    Brother_TG: string;
+    Daughter: string;
+    Son: string ;
+    Sister_DA: string;
+    Brotherinlaw_DA: string;
+    Brother_DA: string;    
+    Sisterinlaw_DA: string;    
+    Cousin: string;    
+    Form_TG: any;   
+    Form_DA: any;    
+    Paid: boolean;    
+    DatePaid: string;    
+    DateJoined: string;   
     
 }

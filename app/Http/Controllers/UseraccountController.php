@@ -9,11 +9,11 @@ class UseraccountController extends Controller
 {
     public function index() {
         
-        date_default_timezone_set('America/Los_Angeles');
-        $date = date('Y-m-d H:i:s');
-        echo $date;
+        //date_default_timezone_set('America/Los_Angeles');
+        //$date = date('Y-m-d H:i:s');
+        //echo $date;
 
-        return Useraccount::all();
+        return response()->json(Useraccount::all());
         //  return Useraccount::where('Id','=','1')->get();
         // return Login::select('Id','Username','Lawyer','Email')->get();
        
@@ -22,7 +22,7 @@ class UseraccountController extends Controller
     public function show($id) {
          
         $account = Useraccount::where('Id','=',$id)->get();
-        return $account;
+        return response()->json($account);
     }
 
     // untested
