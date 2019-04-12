@@ -11,13 +11,14 @@ export class ExampledashComponent implements OnInit {
 
      displayAccounts: account[];
      singleAccount: account[];
-     
+     id: number;
 
   constructor(private accountService: AccountService ) { }
 
   ngOnInit() {
-   this.getAccounts();
-    this.getAccountID();
+     this.id = 2;
+     this.getAccounts();
+     this.getAccountID();
     //console.log(this.singleAccount.Father);
   }
 
@@ -30,7 +31,7 @@ export class ExampledashComponent implements OnInit {
 
   getAccountID(): void {
 
-    this.accountService.getAccountById()
+    this.accountService.getAccountById(this.id)
     .subscribe(singleAccount => this.singleAccount = singleAccount);
     
   }
