@@ -15,26 +15,27 @@ export class AccountService {
 
   private baseUrl = "http://localhost:8000/";
   private apiUrl = "api/accounts";
-
+  private apiUrlSingleAccount = "api/account/";
+  
   accountIndex: account[];
 
   constructor(private http: HttpClient) { }
 
 getAllAccounts(): Observable<account[]>  {
 
-  return this.http.get<account[]>("http://localhost:8000/api/accounts",)
+  return this.http.get<account[]>(this.baseUrl + this.apiUrl)
   .pipe(
     tap(_=> console.log(`sent a get request `)),
-    catchError(this.handleError<account[]>(`g`)));
+    catchError(this.handleError<account[]>(`issue with getting all accounts`)));
 
 }
 
-getAccountById(): Observable<account[]>  {
+getAccountById(id: number): Observable<account[]>  {
 
-  return this.http.get<account[]>("http://localhost:8000/api/account/1")
+  return this.http.get<account[]>(this.baseUrl + this.apiUrlSingleAccount + id)
   .pipe(
     tap(_=> console.log(`sent a get request `)),
-    catchError(this.handleError<account[]>(`g`)));
+    catchError(this.handleError<account[]>(`issue with getting an account by id`)));
 
 }
 

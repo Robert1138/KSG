@@ -5,10 +5,18 @@
 </p>
 
 
-<li *ngFor = "let account of displayAccounts">
-<p>{{account.Father}}</p>
-</li>
+<ul *ngFor = "let account of displayAccounts">
+  <p>{{account.Father}}, {{account.Mother}}, {{account.Daughter}}, {{account.Son}}</p>
+</ul>
+  
+  <div *ngFor="let single of singleAccount">
+  <p>{{single.Daughter}}</p>
+  </div>
+  
+  <div *ngFor="let user of displayUsers">
+    <p> UserID: {{user.Id}} Username: {{user.Username}} Lawyer: {{user.Lawyer}} Email Address: {{user.Email}} </p>
+    </div>
 
-<div *ngFor="let single of singleAccount">
-<p>{{single.Daughter}}</p>
-</div>
+    <div *ngFor="let singleUser of singleUser">
+      <p> UserID: {{singleUser.Id}} Username: {{singleUser.Username}} </p>
+      </div>

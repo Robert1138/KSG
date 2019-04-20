@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
 import { account } from '../account';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-exampledash',
@@ -11,13 +13,20 @@ export class ExampledashComponent implements OnInit {
 
      displayAccounts: account[];
      singleAccount: account[];
-     
+     id: number;
 
-  constructor(private accountService: AccountService ) { }
+     displayUsers: User[];
+     singleUser: User[];
+
+  constructor(private accountService: AccountService,
+              private userService: UserService,      ) { }
 
   ngOnInit() {
-   this.getAccounts();
-    this.getAccountID();
+     this.id = 2;
+     this.getAccounts();
+     this.getAccountID();
+     this.getUserIndex();
+     this.getUserByID();
     //console.log(this.singleAccount.Father);
   }
 
@@ -30,10 +39,22 @@ export class ExampledashComponent implements OnInit {
 
   getAccountID(): void {
 
-    this.accountService.getAccountById()
+    this.accountService.getAccountById(this.id)
     .subscribe(singleAccount => this.singleAccount = singleAccount);
     
   }
+
+getUserIndex(): void {
+  this.userService.getAllUsers()
+  .subscribe(displayUsers => this.displayUsers = displayUsers);
+}
+
+getUserByID(): void {
+  this.userService.getUser("robert")
+  .subscribe(singleUser => this.singleUser = singleUser);
+}
+
+
   }
 
 
