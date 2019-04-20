@@ -15,8 +15,8 @@ userIndex: User[];
 singleUser: User;
 
   private baseUrl = "http://localhost:8000/";
-  private apiUrlUsers = "users";
-  private apiUrlSingleUser = "user/";
+  private apiUrlUsers = "api/users";
+  private apiUrlSingleUser = "api/user/";
 
   constructor(private http: HttpClient) { }
 
@@ -27,6 +27,16 @@ singleUser: User;
       tap(_=> console.log(`sent a get request with user service `)),
       catchError(this.handleError<User[]>(`issue with getting user index`)));
   }
+
+  
+  getUser(username: string): Observable<User[]> {
+
+    return this.http.get<User[]>(this.baseUrl + this.apiUrlSingleUser + username)
+    .pipe(
+      tap(_=> console.log(`sent a get request with user service `)),
+      catchError(this.handleError<User[]>(`issue with getting user index`)));
+  }
+
 
 
 
