@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
+
+
 //f0ead6
 
 import { RoutingModule } from './routing.module';
@@ -22,6 +24,10 @@ import { AboutComponent } from './about/about.component';
 
 
 import { ViewpdfService } from './viewpdf.service';
+import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/user.component';
+
+import { CustomMaterialModule } from './material';
 
 
 
@@ -30,7 +36,9 @@ import { ViewpdfService } from './viewpdf.service';
     AppComponent,
     ContactComponent,
     FormPageComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +54,7 @@ import { ViewpdfService } from './viewpdf.service';
     MatInputModule,
     MatIconModule,
     PdfViewerModule,
+    CustomMaterialModule,
 
   ],
   providers: [
