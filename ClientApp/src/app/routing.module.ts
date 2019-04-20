@@ -5,15 +5,21 @@ import { AboutComponent } from './about/about.component';
 import { FormPageComponent } from './form-page/form-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { ExampledashComponent } from './exampledash/exampledash.component';
 
 const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'formpage', component: FormPageComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'user', component: UserComponent },
+  { path: 'dashboard', component: ExampledashComponent },
+  { path: 'home', component: LandingPageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+
 
 
 ];

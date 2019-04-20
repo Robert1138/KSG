@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -28,6 +29,12 @@ import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 
 import { CustomMaterialModule } from './material';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ExampledashComponent } from './exampledash/exampledash.component';
+
+//services
+import { AccountService } from './account.service';
+
 
 
 
@@ -38,7 +45,9 @@ import { CustomMaterialModule } from './material';
     FormPageComponent,
     AboutComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    LandingPageComponent,
+    ExampledashComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,10 +64,11 @@ import { CustomMaterialModule } from './material';
     MatIconModule,
     PdfViewerModule,
     CustomMaterialModule,
+    HttpClientModule,
 
   ],
   providers: [
-    ViewpdfService,
+    ViewpdfService, AccountService,
   ],
   bootstrap: [AppComponent]
 })
