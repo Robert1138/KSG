@@ -1,0 +1,99 @@
+h1, h2, h3, p, span {
+    font-family: Helvetica, sans-serif;
+    color: black;
+}
+/* Parallax container */
+.parallaxContainer {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+.parallaxContainer h1 {
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: 200;
+    color: white;
+}
+.parallaxContainer p {
+    color: white;
+}
+.parallax {
+    background-image: url('/assets/lp-cover.png');
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Vertical center */
+.parent-vcenter:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+.child-vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    width: 830px;
+}
+/* Why us? */
+.KSGcontainer {
+    text-align: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+.KSG-text p {
+    font-size: 16px;
+}
+.KSG-text span {
+    font-size: 20px;
+}
+.KSG-text h1 {
+    font-weight: 200;
+}
+/* New/continue forms */
+.formButtonContainer {
+    text-align: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+.newFormCard, .continueFormCard {
+    padding: 2%;
+    margin: 2%;
+    background-color: rgba(128, 128, 128, 0.055);
+
+}
+.newFormCard h1, .continueFormCard h1 {
+    font-weight: 200;
+}
+/* New/continue form buttons */
+.newFormCard button, .continueFormCard button {
+    width: 50%;
+    height: 40px;
+    border: 0;
+    margin-left: 12px;
+    border-radius: 7px;
+}
+.button {
+    margin-top: 10%;
+    color: white;
+    background-color: #068C9B;
+}
+.button:hover {
+    background-color: rgba(6, 140, 155, 0.281);
+    cursor: pointer;
+}
