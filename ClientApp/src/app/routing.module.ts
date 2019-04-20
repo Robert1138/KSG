@@ -6,11 +6,13 @@ import { FormPageComponent } from './form-page/form-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { ExampledashComponent } from './exampledash/exampledash.component';
 
 const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'formpage', component: FormPageComponent },
+  { path: 'dashboard', component: ExampledashComponent },
   { path: 'home', component: LandingPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 
