@@ -7,6 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
+import { Login2Component } from './login2/login2.component';
+import { User2Component } from './user2/user2.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import { ExampledashComponent } from './exampledash/exampledash.component';
 
@@ -20,6 +23,8 @@ const routes: Routes = [
   { path: 'home', component: LandingPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 
+  { path: 'login2', component: Login2Component},
+  { path: 'user2', component: User2Component },
 
 
 ];

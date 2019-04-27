@@ -34,6 +34,8 @@ import { ExampledashComponent } from './exampledash/exampledash.component';
 
 //services
 import { AccountService } from './account.service';
+import { Login2Component } from './login2/login2.component';
+import { User2Component } from './user2/user2.component';
 
 
 
@@ -48,6 +50,8 @@ import { AccountService } from './account.service';
     UserComponent,
     LandingPageComponent,
     ExampledashComponent,
+    Login2Component,
+    User2Component,
   ],
   imports: [
     BrowserModule,
