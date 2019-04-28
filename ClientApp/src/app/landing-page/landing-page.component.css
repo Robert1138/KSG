@@ -1,7 +1,14 @@
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(/assets/fonts/Roboto-Thin.ttf) format("truetype");
+}
+
 h1, h2, h3, p, span {
     font-family: Helvetica, sans-serif;
     color: black;
-}
+    font-weight: lighter;
+} 
+
 /* Parallax container */
 .parallaxContainer {
     color: white;
@@ -12,11 +19,16 @@ h1, h2, h3, p, span {
 .parallaxContainer h1 {
     padding-top: 0;
     margin-top: 0;
-    font-weight: 200;
+    font-weight: 100;
     color: white;
+    font-size: 2.2em;
+    margin-bottom: 10px;
 }
 .parallaxContainer p {
     color: white;
+    font-size: 1.2em;
+    margin-top: 0;
+    font-weight: 100;
 }
 .parallax {
     background-image: url('/assets/lp-cover.png');
@@ -40,13 +52,13 @@ h1, h2, h3, p, span {
     vertical-align: middle;
     width: 830px;
 }
-/* Why us? */
+/* What is KSS? */
 .KSGcontainer {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 6%;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1100px;
 }
 .KSG-text p {
     font-size: 16px;
@@ -55,15 +67,38 @@ h1, h2, h3, p, span {
     font-size: 20px;
 }
 .KSG-text h1 {
-    font-weight: 200;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: rgba(235, 92, 92, 0.801);
+    font-family: Roboto-Thin, sans-serif;
 }
-/* New/continue forms */
-.formButtonContainer {
+/* Why us? */
+.KSG2container {
     text-align: center;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
+    width: 1100px;
+}
+.KSG-flex-container {
+    display: flex;
+    padding: 0;
+}
+.KSG-right {
+    flex: 1;
+}
+.KSG-left {
+    flex: 1;
+    padding: 1rem;
+    padding: 0;
+}
+/* New/continue forms */
+.formButtonContainer {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
 }
 .cards {
     display: flex;
@@ -74,6 +109,8 @@ h1, h2, h3, p, span {
 .newFormCard, .continueFormCard {
     padding: 2%;
     margin: 2%;
+    width: 400px;
+    height: 200px;
     background-color: rgba(128, 128, 128, 0.055);
 
 }
@@ -89,7 +126,7 @@ h1, h2, h3, p, span {
     border-radius: 7px;
 }
 .button {
-    margin-top: 10%;
+    margin-top: 15%;
     color: white;
     background-color: #068C9B;
 }
