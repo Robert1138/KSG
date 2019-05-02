@@ -12,6 +12,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
+
 //f0ead6
 
 import { RoutingModule } from './routing.module';
@@ -23,11 +25,17 @@ import { AboutComponent } from './about/about.component';
 
 
 import { ViewpdfService } from './viewpdf.service';
+import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/user.component';
+
+import { CustomMaterialModule } from './material';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ExampledashComponent } from './exampledash/exampledash.component';
 
 //services
 import { AccountService } from './account.service';
+import { Login2Component } from './login2/login2.component';
+import { User2Component } from './user2/user2.component';
 import { UserService } from './user.service';  
 
 
@@ -39,8 +47,12 @@ import { UserService } from './user.service';
     ContactComponent,
     FormPageComponent,
     AboutComponent,
+    LoginComponent,
+    UserComponent,
     LandingPageComponent,
-    ExampledashComponent
+    ExampledashComponent,
+    Login2Component,
+    User2Component,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +68,7 @@ import { UserService } from './user.service';
     MatInputModule,
     MatIconModule,
     PdfViewerModule,
+    CustomMaterialModule,
     HttpClientModule,
 
   ],

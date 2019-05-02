@@ -1,0 +1,13 @@
+.example-card {
+    width: 400px;
+    margin: 10% auto;
+    }
+
+.mat-card-title{
+    font-size: 18px;
+    }
+
+button {
+    background-color:  rgb(139, 130, 130);
+    
+}
