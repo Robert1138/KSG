@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(/assets/fonts/Roboto-Thin.ttf) format("truetype");
+}
+
+h1, h2, h3, p, span {
+    font-family: Helvetica, sans-serif;
+    color: black;
+    font-weight: lighter;
+} 
+
+/* Parallax container */
+.parallaxContainer {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+.parallaxContainer h1 {
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: 100;
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+.parallaxContainer p {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 0;
+    font-weight: 100;
+}
+.parallax {
+    background-image: url('/assets/lp-cover.png');
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Vertical center */
+.parent-vcenter:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+.child-vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    width: 830px;
+}
+/* What is KSS? */
+.KSGcontainer {
+    text-align: center;
+    margin-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+}
+.KSG-text p {
+    font-size: 16px;
+}
+.KSG-text span {
+    font-size: 20px;
+}
+.KSG-text h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    color: rgba(235, 92, 92, 0.801);
+    font-family: Roboto-Thin, sans-serif;
+}
+/* Why us? */
+.KSG2container {
+    text-align: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+}
+.KSG-flex-container {
+    display: flex;
+    padding: 0;
+}
+.KSG-right {
+    flex: 1;
+}
+.KSG-left {
+    flex: 1;
+    padding: 1rem;
+    padding: 0;
+}
+/* New/continue forms */
+.formButtonContainer {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+.newFormCard, .continueFormCard {
+    padding: 2%;
+    margin: 2%;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(128, 128, 128, 0.055);
+
+}
+.newFormCard h1, .continueFormCard h1 {
+    font-weight: 200;
+}
+/* New/continue form buttons */
+.newFormCard button, .continueFormCard button {
+    width: 50%;
+    height: 40px;
+    border: 0;
+    margin-left: 12px;
+    border-radius: 7px;
+}
+.button {
+    margin-top: 15%;
+    color: white;
+    background-color: #068C9B;
+}
+.button:hover {
+    background-color: rgba(6, 140, 155, 0.281);
+    cursor: pointer;
+}

@@ -36,6 +36,7 @@ import { ExampledashComponent } from './exampledash/exampledash.component';
 import { AccountService } from './account.service';
 import { Login2Component } from './login2/login2.component';
 import { User2Component } from './user2/user2.component';
+import { UserService } from './user.service';  
 
 
 
@@ -72,7 +73,7 @@ import { User2Component } from './user2/user2.component';
 
   ],
   providers: [
-    ViewpdfService, AccountService,
+    ViewpdfService, AccountService, UserService
   ],
   bootstrap: [AppComponent]
 })
