@@ -41,6 +41,7 @@ export class ExampledashComponent implements OnInit {
      this.getUserIndex();
      this.getUserByID();
      this.getUserTable();
+     this.newUser("thor", "mjolnir", 0, "asgardrocks@yahoo.com");
      console.log("datasource has " + this.dataSource);
 console.log("displayusers is " + this.displayUsers);
     //console.log(this.singleAccount.Father);
@@ -77,10 +78,14 @@ getUserTable(): void {
   .subscribe(displayUsers => this.dataSource = displayUsers);
 }
 
-
-
 displayedColumns: string[] = ['Id', 'Username', 'Lawyer' ,'Email'];
 dataSource = this.displayUsers;
+
+newUser(username: string, password: string, lawyer: number, email: string): void {
+  console.log("sending that post request");      
+  this.userService.addUser(username, password, lawyer, email)
+  .subscribe();
+}
 
 
 
