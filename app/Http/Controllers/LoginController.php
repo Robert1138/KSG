@@ -33,7 +33,7 @@ class LoginController extends Controller
        $user = new Login;
        $user->Id = $id + 1;
        $user->Username = $username;
-       $user->Password = $password;
+       $user->Password = bcrypt($password);
        $user->Lawyer = $isLawyer;
        $user->Email = $email;
        $user->save();

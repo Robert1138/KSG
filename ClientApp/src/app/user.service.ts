@@ -4,7 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
+import { HttpHeaders } from '@angular/common/http';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +44,13 @@ singleUser: User;
   }
 
 
+   addUser(username: string, password: string, lawyer: number, email: string): Observable<User[]> {
 
+    return this.http.post<User[]>(`${this.baseUrl}${this.apiUrlSingleUser}${username}/${password}/${lawyer}/${email}`, username, httpOptions )
+    .pipe(
+      tap(_=> console.log(`sent a post request with user service `)),
+      catchError(this.handleError<User[]>(`issue with sendingpost`)));
+   }
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

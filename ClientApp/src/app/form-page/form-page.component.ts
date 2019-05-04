@@ -69,6 +69,11 @@ var doc = new jspdf();
   let baseText4: string;
   let baseText5: string;
   let baseText6: string;
+  let nominationPageFooter: string;
+
+  let pageTwoHeader: string; 
+  let pageTwoBody: string;
+  let pageTwoEnd: string;
 
   let tstprint: string;
 
@@ -84,6 +89,14 @@ var doc = new jspdf();
 
   baseText5 = "I, Awesome Mom, sign my name to this instrument consisting of 2 pages on May 29, 2018 and do declare that I sign and execute this instrument as my Declaration of Appointment of Guardian for My Children in the Event of My Death or Incapacity, that I sign it willingly, that I execute it as my free and voluntary act for the purposes therein expressed, and that I am eighteen years of age or older, of sound mind, and under no constraint or undue influence.";
 
+  baseText6 = "Awesome Mom"
+
+  pageTwoHeader = "ACKNOWLEDGMENT OF WITNESSES";
+
+  pageTwoBody = `We declare under penalty of perjury under the laws of the State of California that on the day and year written above, Awesome Mom, published and declared this instrument to be her Declaration of Appointment of Guardian for Children in the Event of Death or Incapacity, that she signed this instrument in our presence, that each of us, in her presence and at her request, and in the presence of each other, have signed our names as attesting witnesses.  We also declare that each of us is now more than eighteen years of age and a competent witness.
+  We also declare that at the time of our attestation of this instrument, Awesome Mom was, to our best knowledge and belief, of sound mind and memory, eighteen years of age or older and under no duress, menace, fraud, misrepresentation, constraint or undue influence. 
+  Executed on May 29, 2018 in the County of Ventura, California.`
+  let test1 = "hello"
  // console.log(doc.getFontList);
 doc.setFontStyle("bold");
 doc.setFontSize(18);
@@ -100,7 +113,15 @@ doc.text(baseText2, 20, 60, {maxWidth: 165, align: "justify"});
 doc.text(baseText3, 20, 100, {maxWidth: 165, align: "justify"});
 doc.text(baseText4, 20, 110, {maxWidth: 165, align: "justify"});
 doc.text(baseText5, 20, 120, {maxWidth: 165, align: "justify"});
+doc.text(baseText6, 20, 200, {maxWidth: 165, align: "justify"});
 
+doc.addPage();
+doc.setFontStyle("bold");
+doc.setFontSize(18);
+doc.setFont("arial");  
+doc.text(pageTwoHeader, 100, 20, 'center');
+doc.setFontSize(12);
+doc.text(pageTwoBody, 20, 60, {maxWidth: 165, align: "justify"});
 
 
 
