@@ -3,6 +3,17 @@ import { AccountService } from '../account.service';
 import { account } from '../account';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { MatTableDataSource } from '@angular/material';
+import { DataSource } from '@angular/cdk/table';
+
+
+const ELEMENT_DATA: User[] = [
+  {Id: 1, Username: 'Hydrogen', Lawyer: 1.0079, Email: 'H'},
+  {Id: 2, Username: 'bib', Lawyer: 8, Email: 'B'},  
+];
+
+
+
 
 @Component({
   selector: 'app-exampledash',
@@ -18,6 +29,8 @@ export class ExampledashComponent implements OnInit {
      displayUsers: User[];
      singleUser: User[];
 
+     display: User[];
+
   constructor(private accountService: AccountService,
               private userService: UserService,      ) { }
 
@@ -27,7 +40,11 @@ export class ExampledashComponent implements OnInit {
      this.getAccountID();
      this.getUserIndex();
      this.getUserByID();
+     this.getUserTable();
+     console.log("datasource has " + this.dataSource);
+console.log("displayusers is " + this.displayUsers);
     //console.log(this.singleAccount.Father);
+    
   }
 
 
@@ -53,6 +70,20 @@ getUserByID(): void {
   this.userService.getUser("robert")
   .subscribe(singleUser => this.singleUser = singleUser);
 }
+
+
+getUserTable(): void {
+  this.userService.getAllUsers()
+  .subscribe(displayUsers => this.dataSource = displayUsers);
+}
+
+
+
+displayedColumns: string[] = ['Id', 'Username', 'Lawyer' ,'Email'];
+dataSource = this.displayUsers;
+
+
+
 
 
   }
