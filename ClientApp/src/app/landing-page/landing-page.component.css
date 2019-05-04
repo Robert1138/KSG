@@ -66,7 +66,7 @@ h1, h2, h3, p, span {
 .KSG-text span {
     font-size: 20px;
 }
-.KSG-text h1 {
+.KSG-text h1, .formButtonContainer h1 {
     font-weight: 700;
     font-size: 2.5em;
     color: rgba(235, 92, 92, 0.801);
@@ -98,7 +98,8 @@ h1, h2, h3, p, span {
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    margin-bottom: 5%;
+    width: 1200px;
 }
 .cards {
     display: flex;
@@ -106,11 +107,12 @@ h1, h2, h3, p, span {
     align-items: stretch;
     justify-content: center;
 }
-.newFormCard, .continueFormCard {
+.newFormCard {
     padding: 2%;
     margin: 2%;
-    width: 400px;
-    height: 200px;
+    width: 800px;
+    border-radius: 20px;
+    height: 440px;
     background-color: rgba(128, 128, 128, 0.055);
 
 }
@@ -118,19 +120,51 @@ h1, h2, h3, p, span {
     font-weight: 200;
 }
 /* New/continue form buttons */
-.newFormCard button, .continueFormCard button {
-    width: 50%;
-    height: 40px;
+.newFormCard button {
+    width: 20%;
+    height: 50px;
     border: 0;
     margin-left: 12px;
-    border-radius: 7px;
+    border-radius: 30px;
 }
+
 .button {
-    margin-top: 15%;
+    font-size: 16px;
+    font-family: Roboto-Thin, sans-serif;
+    font-weight: bolder;
     color: white;
     background-color: #068C9B;
 }
 .button:hover {
     background-color: rgba(6, 140, 155, 0.281);
     cursor: pointer;
+}
+/* Benefits container */
+.benefitsContainer {
+    display: flex;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 650px;
+}
+.benefitsLeft, .benefitsRight {
+    flex: 1;
+    margin: 2%;
+    padding:2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.benefitsLeft h3, .benefitsRight h3 {
+    font-weight: bolder;
+}
+.benefitsRight {
+    padding-left: 10%;
+}
+.benefitsContainer img {
+    float: left;
+    display: block;
+}
+.floatContent {
+    margin-left: 80px;
 }
