@@ -10,6 +10,8 @@ import { MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material'; 
+
 
 
 
@@ -70,6 +72,7 @@ import { UserService } from './user.service';
     PdfViewerModule,
     CustomMaterialModule,
     HttpClientModule,
+    MatTableModule,
 
   ],
   providers: [
