@@ -73,7 +73,6 @@ import { UserService } from './user.service';
     CustomMaterialModule,
     HttpClientModule,
     MatTableModule,
-
   ],
   providers: [
     ViewpdfService, AccountService, UserService

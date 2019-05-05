@@ -58,6 +58,9 @@ table {
   flex-shrink: 0;
   display: inline-flex;
 }
+#right.column {
+  width: 100%;
+}
 ul {
   display: infline-flex;
   list-style: none;
@@ -66,5 +69,7 @@ ul {
   flex-grow: 1;
   overflow-y: auto;
   text-align: center;
-  padding-bottom: 100%;
+}
+.colBottom {
+  margin-bottom: 100%;
 }
