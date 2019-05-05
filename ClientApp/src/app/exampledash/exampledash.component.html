@@ -1,10 +1,32 @@
 <br>
 
-<p>
-  exampledash works!
-</p>
-
-
+<div class="container">
+  <!-- Sidebar -->
+  <div id="left" class="column">
+    <div class="top-left">
+      <h2> Menu</h2>
+    </div>
+    <div class="bottom">
+      <button class="button" (click)="btnForms()"> Forms </button>
+      <button class="button" (click)="btnUsers()"> Users </button>
+      <button class="button" (click)="btnViewPDF()"> View PDF </button>
+      <button class="button"> Account </button>
+      <button class="button"> Log out </button>
+    </div>
+  </div>
+  
+  <!-- Main area -->
+  <div id="right" class="column">
+    <div class="top-right"></div>
+    <br>
+    <div class="bottom">
+      <div *ngIf="isForms"> Hello you're in forms</div>
+      <div *ngIf="isUsers"> Hello you're in users</div>
+      <div *ngIf="isViewPDF">Placeholder for PDF component</div>
+    </div>
+  </div>
+</div>
+<!-- 
 <ul *ngFor = "let account of displayAccounts">
   <p>{{account.Father}}, {{account.Mother}}, {{account.Daughter}}, {{account.Son}}</p>
 </ul>
@@ -20,12 +42,7 @@
     <div *ngFor="let singleUser of singleUser">
       <p> UserID: {{singleUser.Id}} Username: {{singleUser.Username}} </p>
       </div>
-
-
-
-      
-
-
+       -->
 
 <div *ngIf="dataSource;else other_content">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -64,4 +81,4 @@
 </table>
 </div>
 
-<ng-template #other_content>other content here...</ng-template>
+<ng-template #other_content></ng-template>
