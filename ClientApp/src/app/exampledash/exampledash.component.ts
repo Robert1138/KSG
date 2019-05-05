@@ -31,11 +31,18 @@ export class ExampledashComponent implements OnInit {
 
      display: User[];
 
+     isForms: boolean;
+     isUsers: boolean;
+     isViewPDF: boolean;
+
   constructor(private accountService: AccountService,
               private userService: UserService,      ) { }
 
   ngOnInit() {
      this.id = 2;
+     this.isForms = true;
+     this.isUsers = false;
+     this.isViewPDF = false;
      this.getAccounts();
      this.getAccountID();
      this.getUserIndex();
@@ -87,10 +94,23 @@ newUser(username: string, password: string, lawyer: number, email: string): void
   .subscribe();
 }
 
-
-
-
-
-  }
+btnForms() {
+  this.isForms = true;
+  this.isUsers = false;
+  this.isViewPDF = false;
+  console.log("your button form clicked");
+}
+btnUsers() {
+  this.isForms = false;
+  this.isUsers = true;
+  this.isViewPDF = false;
+  console.log("your button users clicked");
+}
+btnViewPDF() {
+  this.isForms = false;
+  this.isUsers = false;
+  this.isViewPDF = true;
+}
+}
 
 
