@@ -5,6 +5,7 @@ import { User } from '../user';
 import { UserService } from '../user.service';
 import { MatTableDataSource } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
+import { AboutComponent } from '../about/about.component';
 
 
 const ELEMENT_DATA: User[] = [
@@ -98,13 +99,11 @@ btnForms() {
   this.isForms = true;
   this.isUsers = false;
   this.isViewPDF = false;
-  console.log("your button form clicked");
 }
 btnUsers() {
   this.isForms = false;
   this.isUsers = true;
   this.isViewPDF = false;
-  console.log("your button users clicked");
 }
 btnViewPDF() {
   this.isForms = false;
