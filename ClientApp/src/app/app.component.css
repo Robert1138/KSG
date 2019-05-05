@@ -24,7 +24,8 @@ body {
 }
 a:hover {
   color: white;
-  background-color: rgb(1, 59, 121);
+  background-color: hsl(186, 93%, 39%);
+  border-radius: 20px;
 }
 .mat-toolbar {
 background: #068C9B;

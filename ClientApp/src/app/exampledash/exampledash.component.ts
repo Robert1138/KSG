@@ -5,6 +5,7 @@ import { User } from '../user';
 import { UserService } from '../user.service';
 import { MatTableDataSource } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
+import { AboutComponent } from '../about/about.component';
 
 
 const ELEMENT_DATA: User[] = [
@@ -31,11 +32,18 @@ export class ExampledashComponent implements OnInit {
 
      display: User[];
 
+     isForms: boolean;
+     isUsers: boolean;
+     isViewPDF: boolean;
+
   constructor(private accountService: AccountService,
               private userService: UserService,      ) { }
 
   ngOnInit() {
      this.id = 2;
+     this.isForms = true;
+     this.isUsers = false;
+     this.isViewPDF = false;
      this.getAccounts();
      this.getAccountID();
      this.getUserIndex();
@@ -87,10 +95,21 @@ newUser(username: string, password: string, lawyer: number, email: string): void
   .subscribe();
 }
 
-
-
-
-
-  }
+btnForms() {
+  this.isForms = true;
+  this.isUsers = false;
+  this.isViewPDF = false;
+}
+btnUsers() {
+  this.isForms = false;
+  this.isUsers = true;
+  this.isViewPDF = false;
+}
+btnViewPDF() {
+  this.isForms = false;
+  this.isUsers = false;
+  this.isViewPDF = true;
+}
+}
 
 

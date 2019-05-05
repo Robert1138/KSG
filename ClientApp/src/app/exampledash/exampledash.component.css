@@ -1,4 +1,75 @@
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(/assets/fonts/Roboto-Thin.ttf) format("truetype");
+}
+html {
+  height: 100%;
+}
 table {
     width: 100%;
-  }
-  
+}
+.container {
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+  display: flex;
+  box-sizing: border-box;
+}
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#left, .top-left {
+  flex-shrink: 0;
+  width: 250px;
+}
+#left {
+  height: auto;
+  background-color: rgba(211, 211, 211, 0.13);
+}
+#left h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: Roboto-Thin, sans-serif;
+}
+.button {
+  text-align: center;
+  display: block;
+  border: none;
+  font-size: 20px;
+  font-family: Roboto-Thin, sans-serif;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
+  padding: 20px;
+  margin-left: 32%;
+}
+.button:hover {
+  background-color: #068C9B;
+  color: white;
+  border-radius: 5px;
+}
+#left h2 {
+  margin-top: 75%;
+}
+.top-right {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+#right.column {
+  width: 100%;
+}
+ul {
+  display: infline-flex;
+  list-style: none;
+}
+.bottom {
+  flex-grow: 1;
+  overflow-y: auto;
+  text-align: center;
+}
+.colBottom {
+  margin-bottom: 100%;
+}
