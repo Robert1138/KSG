@@ -38,7 +38,10 @@ import { ExampledashComponent } from './exampledash/exampledash.component';
 import { AccountService } from './account.service';
 import { Login2Component } from './login2/login2.component';
 import { User2Component } from './user2/user2.component';
-import { UserService } from './user.service';  
+import { UserService } from './user.service';
+import { UserTableComponent } from './user-table/user-table.component';
+import { AccountsInfoComponent } from './accounts-info/accounts-info.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';  
 
 
 
@@ -55,6 +58,9 @@ import { UserService } from './user.service';
     ExampledashComponent,
     Login2Component,
     User2Component,
+    UserTableComponent,
+    AccountsInfoComponent,
+    AccountDetailsComponent,
   ],
   imports: [
     BrowserModule,

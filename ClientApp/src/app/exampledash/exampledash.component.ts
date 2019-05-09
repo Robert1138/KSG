@@ -35,6 +35,7 @@ export class ExampledashComponent implements OnInit {
      isForms: boolean;
      isUsers: boolean;
      isViewPDF: boolean;
+     isAccounts: boolean;
 
   constructor(private accountService: AccountService,
               private userService: UserService,      ) { }
@@ -44,15 +45,13 @@ export class ExampledashComponent implements OnInit {
      this.isForms = true;
      this.isUsers = false;
      this.isViewPDF = false;
+     this.isAccounts = false;
      this.getAccounts();
      this.getAccountID();
      this.getUserIndex();
      this.getUserByID();
      this.getUserTable();
-     this.newUser("thor", "mjolnir", 0, "asgardrocks@yahoo.com");
-     console.log("datasource has " + this.dataSource);
-console.log("displayusers is " + this.displayUsers);
-    //console.log(this.singleAccount.Father);
+     
     
   }
 
@@ -99,17 +98,30 @@ btnForms() {
   this.isForms = true;
   this.isUsers = false;
   this.isViewPDF = false;
+  this.isAccounts = false;
 }
 btnUsers() {
   this.isForms = false;
   this.isUsers = true;
   this.isViewPDF = false;
+  this.isAccounts = false;
 }
 btnViewPDF() {
   this.isForms = false;
   this.isUsers = false;
   this.isViewPDF = true;
+  this.isAccounts = false;
 }
+
+ btnAccounts() {
+   console.log("acountsbuttonclicked");
+    this.isForms = false;
+    this.isUsers = false;
+    this.isViewPDF = false;
+    this.isAccounts = true;
+
+  }
+
 }
 
 

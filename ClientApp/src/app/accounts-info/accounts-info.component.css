@@ -1,0 +1,92 @@
+.button {
+    text-align: left;
+    display: block;
+    border: none;
+    font-size: 12px;
+    font-family: Roboto-Thin, sans-serif;
+    font-weight: 700;
+    background: none;
+    cursor: pointer;
+    padding: 20px;
+    /*margin-left: 32%;*/
+  }
+  .button:hover {
+    background-color: #068C9B;
+    color: rgb(226, 218, 218);
+    border-radius: 5px;
+  }
+
+table {
+    text-align: center;
+    width: 100%;
+}
+
+.mat-header-cell {
+    
+    /*padding: 21px 0;*/
+    text-align: center;
+
+   }
+
+
+
+
+
+
+
+
+
+
+.accountstyle li {
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    list-style-type: none;
+
+  }
+  
+  .accountstyle li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+
+
+
+
+
+
+.accountstyle a {
+    color: #888;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 250px;
+  }
+
+  
+.accountstyle a:hover {
+    color:#607D8B;
+  }
+  
+  .accountstyle .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    min-width: 16px;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  

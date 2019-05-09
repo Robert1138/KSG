@@ -1,0 +1,80 @@
+<br>
+
+<div *ngIf="displayAccounts">
+  <ul class="accountstyle">
+    <div *ngFor="let account of displayAccounts">
+      <button class="button">{{account.Father}}</button>
+    </div>
+  </ul>
+</div>
+
+
+<div *ngIf="dataSource;else other_content">
+  <div class="default-theme">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+      The actual rendered columns are set as a property on the row definition" -->
+
+        <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <button class="button">Edit</button>
+          <button class="button">Delete</button>
+        </td>
+      </ng-container>
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element">{{element.Id}}</td>
+          </ng-container>
+
+      <ng-container matColumnDef="Father">
+        <th mat-header-cell *matHeaderCellDef> Father </th>
+        <td mat-cell *matCellDef="let element"> {{element.Father}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Mother">
+        <th mat-header-cell *matHeaderCellDef> Mother </th>
+        <td mat-cell *matCellDef="let element"> {{element.Mother}} </td>
+      </ng-container>
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Sister">
+        <th mat-header-cell *matHeaderCellDef> Sister </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sister_TG}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Brother">
+        <th mat-header-cell *matHeaderCellDef> Brother </th>
+        <td mat-cell *matCellDef="let element">{{element.Brother_TG}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Daughter">
+        <th mat-header-cell *matHeaderCellDef> Daughter </th>
+        <td mat-cell *matCellDef="let element">{{element.Daughter}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Son">
+        <th mat-header-cell *matHeaderCellDef> Son </th>
+        <td mat-cell *matCellDef="let element">{{element.Son}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Cousin">
+        <th mat-header-cell *matHeaderCellDef> Cousin </th>
+        <td mat-cell *matCellDef="let element">{{element.Cousin}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Date Joined">
+        <th mat-header-cell *matHeaderCellDef> Date Joined </th>
+        <td mat-cell *matCellDef="let element">{{element.DateJoined}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

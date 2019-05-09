@@ -53,6 +53,7 @@ z-index: 1;
 .footer {
   background-color: #068C9B;
   height: 200px;
+ 
 }
 .footer-container {
   display: flex;

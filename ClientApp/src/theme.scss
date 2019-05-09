@@ -23,6 +23,9 @@ $custom-typography: mat-typography-config(
     @include mat-stepper-theme($default-theme);
 
    @include angular-material-theme($default-theme);
+   @include mat-form-field-theme($default-theme);
+   @include mat-card-theme($default-theme);
+   @include mat-input-theme($default-theme);
    @include mat-button-theme($default-theme);
 
    
@@ -32,7 +35,7 @@ $custom-typography: mat-typography-config(
     @include mat-core();
     @include mat-stepper-theme($default-theme);
     @include mat-form-field-theme($form-theme);
-
+    @include mat-input-theme($default-theme);
 }
 
 
