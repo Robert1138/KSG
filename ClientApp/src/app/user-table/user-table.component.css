@@ -9,3 +9,8 @@ table {
     text-align: left;
 
    }
+
+.default-theme {
+    padding-top: 5%;
+    padding-left: 10%;
+}

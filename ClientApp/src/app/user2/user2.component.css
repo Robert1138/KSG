@@ -1,8 +1,49 @@
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(/assets/fonts/Roboto-Thin.ttf) format("truetype");
+}
 
 .example-card {
-    width: 200px;
+    width: 400px;
     margin: 10% auto;
   }
   .mat-card-title{
     font-size: 16px;
+    font-weight: lighter;
+  }
+
+  * {
+    text-align: center;
+    padding: 4px;
+  }
+
+  h1 {
+    margin-top: 8%;
+    padding: 1%;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    font-family: Roboto-Thin, sans-serif;
+    font-weight: bolder;
+  }
+
+  .mat-card-header {
+    margin-right: 0;
+    display: none;
+  }
+
+  .default-theme {
+    margin-top: 0;
+    padding: 0;
+  }
+  .example-card.mat-card {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .mat-raised-button.mat-primary {
+    margin-bottom: 8%;
+    background-color: #068C9B;
+  }
+  .example-form.ng-untouched.ng-pristine.ng-invalid {
+    padding-left: 20%;
   }
