@@ -48,7 +48,7 @@
       <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
     </mat-card-content>
     <mat-card-actions class = "buttonColor">
-      <button mat-raised-button (click)="login()" color="primary">Register</button>
+      <button mat-raised-button (click)="addUser(firstName, password, 0, email)" color="primary">Register</button>
       <button mat-raised-button [routerLink]="['register']"color="secondary">Cancel</button>
     </mat-card-actions>
   </mat-card>

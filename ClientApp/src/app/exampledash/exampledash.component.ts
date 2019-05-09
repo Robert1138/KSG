@@ -51,10 +51,7 @@ export class ExampledashComponent implements OnInit {
      this.getUserIndex();
      this.getUserByID();
      this.getUserTable();
-     this.newUser("thor", "mjolnir", 0, "asgardrocks@yahoo.com");
-     console.log("datasource has " + this.dataSource);
-console.log("displayusers is " + this.displayUsers);
-    //console.log(this.singleAccount.Father);
+     
     
   }
 
