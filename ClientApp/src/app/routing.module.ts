@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'dashboard', component: ExampledashComponent },
   { path: 'home', component: LandingPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'account/:id', component: LandingPageComponent },
 
   { path: 'login2', component: Login2Component},
   { path: 'user2', component: User2Component },

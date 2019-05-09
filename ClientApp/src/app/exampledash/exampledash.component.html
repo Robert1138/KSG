@@ -9,7 +9,7 @@
       <button class="button" (click)="btnForms()"> Forms </button>
       <button class="button" (click)="btnUsers()"> Users </button>
       <button class="button" (click)="btnViewPDF()"> View PDF </button>
-      <button class="button"> Account </button>
+      <button class="button" (click)="btnAccounts()"> Account </button>
       <button class="button"> Log out </button>
     </div>
   </div>
@@ -19,8 +19,9 @@
     <div class="top-right"></div>
     <div class="bottom">
       <div *ngIf="isForms"><app-form-page></app-form-page></div>
-      <div *ngIf="isUsers"> <br><br>Hello you're in users</div>
+      <div *ngIf="isUsers"> <br><br><app-user-table></app-user-table></div>
       <div *ngIf="isViewPDF"><app-about></app-about></div>
+      <div *ngIf="isAccounts"><app-accounts-info></app-accounts-info></div>
     </div>
   </div>
 </div>
